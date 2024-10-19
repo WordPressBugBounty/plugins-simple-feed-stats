@@ -9,9 +9,9 @@ Author URI: https://plugin-planet.com/
 Donate link: https://monzillamedia.com/donate.html
 Contributors: specialk
 Requires at least: 4.6
-Tested up to: 6.6
-Stable tag: 20240625
-Version:    20240625
+Tested up to: 6.7
+Stable tag: 20241014
+Version:    20241014
 Requires PHP: 5.6.20
 Text Domain: simple-feed-stats
 Domain Path: /languages
@@ -343,9 +343,9 @@ Send any questions or feedback via my [contact form](https://plugin-planet.com/s
 If you like Simple Statistics for Feeds, please take a moment to [give a 5-star rating](https://wordpress.org/support/plugin/simple-feed-stats/reviews/?rate=5#new-post). It helps to keep development and support going strong. Thank you!
 
 
-**20240625**
+**20241014**
 
-* Tests on WordPress 6.6
+* Tests on WordPress 6.7
 
 
 Full changelog @ [https://plugin-planet.com/wp/changelog/simple-feed-stats.txt](https://plugin-planet.com/wp/changelog/simple-feed-stats.txt)

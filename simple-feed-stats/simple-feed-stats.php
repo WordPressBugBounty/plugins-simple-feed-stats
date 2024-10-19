@@ -9,9 +9,9 @@
 	Donate link: https://monzillamedia.com/donate.html
 	Contributors: specialk
 	Requires at least: 4.6
-	Tested up to: 6.6
-	Stable tag: 20240625
-	Version:    20240625
+	Tested up to: 6.7
+	Stable tag: 20241014
+	Version:    20241014
 	Requires PHP: 5.6.20
 	Text Domain: simple-feed-stats
 	Domain Path: /languages
@@ -41,7 +41,7 @@ require_once('sfs-admin.php');
 require_once('sfs-shortcodes.php');
 
 $sfs_wp_vers = '4.6';
-$sfs_version = '20240625';
+$sfs_version = '20241014';
 $sfs_options = get_option('sfs_options', sfs_default_options());
 
 define('SFS_PLUGIN_FILE', 'simple-feed-stats/simple-feed-stats.php');
