@@ -2,16 +2,6 @@
 
 
 
-// i18n
-function sfs_i18n_init() {
-	
-	load_plugin_textdomain('simple-feed-stats', false, dirname(plugin_basename(SFS_PLUGIN_FILE)) .'/languages/');
-	
-}
-add_action('init', 'sfs_i18n_init');
-
-
-
 // whitelist settings
 function sfs_init() {
 	
@@ -1186,7 +1176,7 @@ function sfs_render_form() {
 		</div>
 		<div class="sfs-credits">
 			<a target="_blank" rel="noopener noreferrer" href="https://perishablepress.com/simple-feed-stats/" title="<?php esc_attr_e('Plugin Homepage', 'simple-feed-stats'); ?>">Simple Statistics for Feeds</a> <?php esc_html_e('by', 'simple-feed-stats'); ?> 
-			<a target="_blank" rel="noopener noreferrer" href="https://twitter.com/perishable" title="<?php esc_attr_e('Jeff Starr on Twitter', 'simple-feed-stats'); ?>">Jeff Starr</a> @ 
+			<a target="_blank" rel="noopener noreferrer" href="https://x.com/perishable" title="<?php esc_attr_e('Jeff Starr on X (Twitter)', 'simple-feed-stats'); ?>">Jeff Starr</a> @ 
 			<a target="_blank" rel="noopener noreferrer" href="https://monzillamedia.com/" title="<?php esc_attr_e('Obsessive Web Design &amp; Development', 'simple-feed-stats'); ?>">Monzilla Media</a>
 		</div>
 	</div>

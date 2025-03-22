@@ -8,10 +8,10 @@
 	Author URI: https://plugin-planet.com/
 	Donate link: https://monzillamedia.com/donate.html
 	Contributors: specialk
-	Requires at least: 4.6
-	Tested up to: 6.7
-	Stable tag: 20241014
-	Version:    20241014
+	Requires at least: 4.7
+	Tested up to: 6.8
+	Stable tag: 20250322
+	Version:    20250322
 	Requires PHP: 5.6.20
 	Text Domain: simple-feed-stats
 	Domain Path: /languages
@@ -32,7 +32,7 @@
 	You should have received a copy of the GNU General Public License
 	with this program. If not, visit: https://www.gnu.org/licenses/
 	
-	Copyright 2024 Monzilla Media. All rights reserved.
+	Copyright 2025 Monzilla Media. All rights reserved.
 */
 
 if (!defined('ABSPATH')) die();
@@ -40,8 +40,8 @@ if (!defined('ABSPATH')) die();
 require_once('sfs-admin.php');
 require_once('sfs-shortcodes.php');
 
-$sfs_wp_vers = '4.6';
-$sfs_version = '20241014';
+$sfs_wp_vers = '4.7';
+$sfs_version = '20250322';
 $sfs_options = get_option('sfs_options', sfs_default_options());
 
 define('SFS_PLUGIN_FILE', 'simple-feed-stats/simple-feed-stats.php');

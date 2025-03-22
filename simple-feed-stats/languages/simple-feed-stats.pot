@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-14 22:53+0000\n"
+"POT-Creation-Date: 2025-03-22 15:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -32,7 +32,7 @@ msgstr ""
 msgid "Alternate tracking"
 msgstr ""
 
-#: support-panel.php:61
+#: support-panel.php:87
 msgid "and is greatly appreciated."
 msgstr ""
 
@@ -40,7 +40,7 @@ msgstr ""
 msgid "and/or"
 msgstr ""
 
-#: support-panel.php:63
+#: support-panel.php:89
 msgid ""
 "Any size donation helps me to continue developing this free plugin and other "
 "awesome WordPress resources."
@@ -76,7 +76,7 @@ msgstr ""
 msgid "Atom"
 msgstr ""
 
-#: support-panel.php:53
+#: support-panel.php:79
 msgid "books"
 msgstr ""
 
@@ -264,11 +264,11 @@ msgstr ""
 msgid "Display your custom feed count instead of the recorded value"
 msgstr ""
 
-#: support-panel.php:51
+#: support-panel.php:77
 msgid "Donate via PayPal, credit card, or cryptocurrency"
 msgstr ""
 
-#: support-panel.php:55
+#: support-panel.php:81
 msgid "donation"
 msgstr ""
 
@@ -421,7 +421,7 @@ msgid "Jeff Starr"
 msgstr ""
 
 #: sfs-admin.php:1189
-msgid "Jeff Starr on Twitter"
+msgid "Jeff Starr on X (Twitter)"
 msgstr ""
 
 #: sfs-admin.php:88
@@ -440,7 +440,7 @@ msgstr ""
 msgid "Make a donation via PayPal"
 msgstr ""
 
-#: support-panel.php:105
+#: support-panel.php:132
 msgid "Make a donation&nbsp;&raquo;"
 msgstr ""
 
@@ -520,11 +520,11 @@ msgstr ""
 msgid "open tracking via image"
 msgstr ""
 
-#: support-panel.php:59
+#: support-panel.php:85
 msgid "or"
 msgstr ""
 
-#: support-panel.php:59
+#: support-panel.php:85
 msgid "or by making a"
 msgstr ""
 
@@ -536,7 +536,7 @@ msgstr ""
 msgid "Overview"
 msgstr ""
 
-#: support-panel.php:49
+#: support-panel.php:75
 msgid "Perishable Press Books"
 msgstr ""
 
@@ -544,11 +544,11 @@ msgstr ""
 msgid "Please"
 msgstr ""
 
-#: support-panel.php:102
+#: support-panel.php:129
 msgid "Please Donate"
 msgstr ""
 
-#: support-panel.php:58
+#: support-panel.php:84
 msgid "Please show support by purchasing one of my"
 msgstr ""
 
@@ -560,7 +560,7 @@ msgstr ""
 msgid "Plugin Homepage"
 msgstr ""
 
-#: support-panel.php:50
+#: support-panel.php:76
 msgid "Plugin Planet: Pro WordPress Plugins"
 msgstr ""
 
@@ -568,7 +568,7 @@ msgstr ""
 msgid "Plugin Settings"
 msgstr ""
 
-#: support-panel.php:54
+#: support-panel.php:80
 msgid "plugins"
 msgstr ""
 
@@ -708,7 +708,7 @@ msgstr ""
 msgid "Text and basic markup allowed"
 msgstr ""
 
-#: support-panel.php:57
+#: support-panel.php:83
 msgid "Thank you for using"
 msgstr ""
 
@@ -941,7 +941,7 @@ msgid ""
 "Thank you!"
 msgstr ""
 
-#: support-panel.php:60
+#: support-panel.php:86
 msgid "Your generous support helps to ensure future development of"
 msgstr ""
 
