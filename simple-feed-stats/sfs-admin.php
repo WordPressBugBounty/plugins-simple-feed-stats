@@ -573,11 +573,11 @@ function sfs_render_form() {
 	<div class="wrap sfs-admin">
 		<h1><?php esc_html_e('Simple Statistics for Feeds', 'simple-feed-stats'); ?> <small><?php echo 'v'. $sfs_version; ?></small></h1>
 		
-		<?php if (isset($_GET['cache'])) : ?>
+		<?php if (isset($_GET['clear-cache'])) : ?>
 		<div class="notice notice-success is-dismissible"><p><strong><?php esc_html_e('Cache cleared', 'simple-feed-stats'); ?>.</strong></p></div>
 		<?php endif; ?>
 		
-		<?php if (isset($_GET['reset'])) : ?>
+		<?php if (isset($_GET['reset-stats'])) : ?>
 		<div class="notice notice-success is-dismissible"><p><strong><?php esc_html_e('All feed stats deleted', 'simple-feed-stats'); ?>.</strong></p></div>
 		<?php endif; ?>
 		
@@ -997,14 +997,14 @@ function sfs_render_form() {
 									<tr>
 										<th scope="row"><label class="description"><?php esc_html_e('Clear the cache', 'simple-feed-stats'); ?></label></th>
 										<td>
-											<strong><a href="<?php get_admin_url(); ?>options-general.php?page=sfs-options&amp;cache=clear"><?php esc_html_e('Clear cache', 'simple-feed-stats'); ?></a></strong> 
+											<strong><?php echo sfs_clear_cache_link(); ?></strong> 
 											<span class="tooltip" title="<?php esc_attr_e('Note: it is safe to clear the cache at any time. WordPress automatically will cache fresh data.', 'simple-feed-stats'); ?>">?</span>
 										</td>
 									</tr>
 									<tr>
 										<th scope="row"><label class="description"><?php esc_html_e('Reset feed stats', 'simple-feed-stats'); ?></label></th>
 										<td>
-											<strong><a class="reset" href="<?php get_admin_url(); ?>options-general.php?page=sfs-options&amp;reset=true"><?php esc_html_e('Reset stats', 'simple-feed-stats'); ?></a></strong> 
+											<strong><?php echo sfs_reset_stats_link(); ?></strong> 
 											<span class="tooltip" title="<?php esc_attr_e('Warning: this will delete all feed stats! Note: deletes data only, not options.', 'simple-feed-stats'); ?>">?</span>
 										</td>
 									</tr>

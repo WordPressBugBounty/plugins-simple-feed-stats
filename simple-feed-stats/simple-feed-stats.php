@@ -10,8 +10,8 @@
 	Contributors: specialk
 	Requires at least: 4.7
 	Tested up to: 6.8
-	Stable tag: 20250322
-	Version:    20250322
+	Stable tag: 20250820
+	Version:    20250820
 	Requires PHP: 5.6.20
 	Text Domain: simple-feed-stats
 	Domain Path: /languages
@@ -41,7 +41,7 @@ require_once('sfs-admin.php');
 require_once('sfs-shortcodes.php');
 
 $sfs_wp_vers = '4.7';
-$sfs_version = '20250322';
+$sfs_version = '20250820';
 $sfs_options = get_option('sfs_options', sfs_default_options());
 
 define('SFS_PLUGIN_FILE', 'simple-feed-stats/simple-feed-stats.php');
@@ -643,45 +643,91 @@ function sfs_tracker() {
 
 
 
+// clear cache link
+function sfs_clear_cache_link() {
+	
+	$nonce = wp_create_nonce('sfs_clear_cache');
+	
+	$label = esc_html__('Clear cache', 'simple-feed-stats');
+	
+	$href  = add_query_arg(array('clear-cache-verify' => $nonce, 'cache' => 'clear'), admin_url('options-general.php?page=sfs-options'));
+	
+	echo '<a class="sfs-clear-cache" href="'. esc_url($href) .'">'. esc_html($label) .'</a>';
+	
+}
+
 // clear cache (single site only)
 function sfs_clear_cache() {
 	
-	if (isset($_GET['cache']) && $_GET['cache'] === 'clear') {
+	if (isset($_GET['clear-cache-verify']) && wp_verify_nonce($_GET['clear-cache-verify'], 'sfs_clear_cache')) {
 		
-		if (current_user_can('activate_plugins')) {
+		if (isset($_GET['cache']) && $_GET['cache'] === 'clear') {
 			
-			sfs_delete_transients();
-			sfs_create_transients();
+			if (current_user_can('activate_plugins')) {
+				
+				sfs_delete_transients();
+				sfs_create_transients();
+				
+				$location = admin_url('options-general.php?page=sfs-options&clear-cache=true');
+				
+				wp_redirect($location);
+				
+				exit;
+				
+			}
 			
 		}
 		
 	}
 	
 }
-add_action('init', 'sfs_clear_cache');
+add_action('admin_init', 'sfs_clear_cache');
 
 
+
+// reset stats link
+function sfs_reset_stats_link() {
+	
+	$nonce = wp_create_nonce('sfs_reset_stats');
+	
+	$label = esc_html__('Reset stats', 'simple-feed-stats');
+	
+	$href  = add_query_arg(array('reset-stats-verify' => $nonce, 'reset' => 'true'), admin_url('options-general.php?page=sfs-options'));
+	
+	echo '<a class="sfs-reset-stats reset" href="'. esc_url($href) .'">'. esc_html($label) .'</a>';
+	
+}
 
 // reset stats (single site only)
 function sfs_reset_stats() {
 	
-	global $wpdb;
-	
-	if ((isset($_GET['reset'])) && ($_GET['reset'] === 'true')) {
+	if (isset($_GET['reset-stats-verify']) && wp_verify_nonce($_GET['reset-stats-verify'], 'sfs_reset_stats')) {
 		
-		if (current_user_can('activate_plugins')) {
+		if (isset($_GET['reset']) && $_GET['reset'] === 'true') {
 			
-			$truncate = $wpdb->query("TRUNCATE ". $wpdb->prefix ."simple_feed_stats");
-			
-			sfs_delete_transients();
-			sfs_create_transients();
+			if (current_user_can('activate_plugins')) {
+				
+				global $wpdb;
+				
+				$truncate = $wpdb->query("TRUNCATE ". $wpdb->prefix ."simple_feed_stats");
+				
+				sfs_delete_transients();
+				sfs_create_transients();
+				
+				$location = admin_url('options-general.php?page=sfs-options&reset-stats=true');
+				
+				wp_redirect($location);
+				
+				exit;
+				
+			}
 			
 		}
 		
 	}
 	
 }
-add_action('init', 'sfs_reset_stats');
+add_action('admin_init', 'sfs_reset_stats');
 
 
 
